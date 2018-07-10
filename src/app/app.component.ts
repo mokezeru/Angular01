@@ -3,8 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
+   })
 export class AppComponent {
-  title = 'app';
+  componentCounterValue: number;
+  title = 'My Counter';
+  constructor(){
+    this.componentCounterValue = 5;
+  }
+  updateValue(value:number){
+    this.componentCounterValue=value;
+  }
+  
 }
